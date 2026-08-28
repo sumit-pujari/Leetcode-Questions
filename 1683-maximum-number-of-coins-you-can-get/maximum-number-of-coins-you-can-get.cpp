@@ -7,7 +7,7 @@ public:
         int ans=0;
         int i=n-2;
 
-        for(int count=0;count<n/3;count++){
+        for(int round=0;round<n/3;round++){
             ans+=piles[i];
             i-=2;
         }
