@@ -3,16 +3,13 @@ public:
     int maxCoins(vector<int>& piles) {
         sort(piles.begin(),piles.end());
         //1 2 2 4 7 8
-
+        int n=piles.size();
         int ans=0;
-        while(piles.size()>0){
-            piles.erase(piles.begin());
+        int i=n-2;
 
-            piles.pop_back();
-
-            ans+=piles.back();
-
-            piles.pop_back();
+        for(int count=0;count<n/3;count++){
+            ans+=piles[i];
+            i-=2;
         }
         return ans;
     }
